@@ -20,6 +20,7 @@ const DataDetch = () => {
         setError('Something went wrong');
       });
   }, []);
+  
   return (
     <div>
       {loading ? 'Loading...' : post.title}

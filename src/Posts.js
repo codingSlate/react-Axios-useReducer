@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { DataContext } from './context/fetchDataContext';
-const Post = () => {
+const Posts = () => {
   const { state } = useContext(DataContext);
   // console.log(state);
 
@@ -9,13 +9,14 @@ const Post = () => {
       {state.loading && <p>Loading...</p>}
       {state.error && <p>{state.error}</p>}
 
-      {state.post && (
-        <div key={state.post.id}>
-          <h3>{state.post.title}</h3>
-          <p>{state.post.body}</p>
-        </div>
-      )}
+      {state.posts &&
+        state.posts.map((post) => (
+          <div key={post.id}>
+            <h3>{post.title}</h3>
+            <p>{post.body}</p>
+          </div>
+        ))}
     </>
   );
 };
-export default Post;
+export default Posts;

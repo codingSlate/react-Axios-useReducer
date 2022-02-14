@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { DataContext } from './context/fetchDataContext';
 const Posts = () => {
   const { state } = useContext(DataContext);
-  // console.log(state);
+  console.log(state.posts);
 
   return (
     <>

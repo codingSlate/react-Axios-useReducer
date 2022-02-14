@@ -6,7 +6,7 @@ export const DataContext = createContext();
 const initialState = {
   loading: true,
   error: null,
-  posts: {},
+  posts: null,
 };
 
 // reducer function
